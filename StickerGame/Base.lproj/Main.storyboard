@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StickerGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="28I-ce-9ZI">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wn8-Yi-RbM">
+                                <rect key="frame" x="30" y="30" width="210" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BiM-y3-AZi">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="TJY-EV-OMe"/>
+                                            <constraint firstAttribute="height" constant="70" id="n8g-Xf-h0X"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="pic1"/>
+                                        <connections>
+                                            <action selector="addSticker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tma-04-cRR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZe-pW-c4h">
+                                        <rect key="frame" x="70" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="kYJ-tR-xRs"/>
+                                            <constraint firstAttribute="width" constant="70" id="l2Z-9g-bIF"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="pic2.png"/>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRw-bz-0ui">
+                                        <rect key="frame" x="140" y="0.0" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="WUe-di-KxY"/>
+                                            <constraint firstAttribute="width" constant="70" id="jsx-g1-bIV"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="pic3.png"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wn8-Yi-RbM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Cv5-eF-PvQ"/>
+                            <constraint firstItem="28I-ce-9ZI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XRk-9n-nfq"/>
+                            <constraint firstItem="28I-ce-9ZI" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="c0l-Wp-yH6"/>
+                            <constraint firstItem="Wn8-Yi-RbM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="cyA-M7-B0i"/>
+                            <constraint firstItem="28I-ce-9ZI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="fCH-DN-fz8"/>
+                            <constraint firstItem="28I-ce-9ZI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="m7r-jV-MjY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="7Jx-Hu-RgE">
+                    <connections>
+                        <action selector="deagSticker:" destination="BYZ-38-t0r" id="WNG-Cm-Bbl"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="134.48275862068968" y="133.59999999999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="841.91998291015625" height="595.20001220703125"/>
+        <image name="pic1" width="401" height="400"/>
+        <image name="pic2.png" width="325" height="441"/>
+        <image name="pic3.png" width="419" height="723"/>
+    </resources>
+</document>
